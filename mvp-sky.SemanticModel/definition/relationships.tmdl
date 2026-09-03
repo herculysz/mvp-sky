@@ -1,0 +1,19 @@
+relationship 2f839008-7634-4412-82cb-31dc6a489246
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_calendario.Data
+	toColumn: LocalDateTable_bea7b7cd-4e5a-4991-89e3-817011c4209d.Date
+
+relationship 46152887-c1fe-4ccb-8afa-ed1756e1958c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_calendario.'Início do Mês'
+	toColumn: LocalDateTable_498158f6-430a-4bd6-80e9-7622cf64ec13.Date
+
+relationship a3e03801-0554-42a3-8e41-aa921117f6a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_updated.DataHoraAtualização
+	toColumn: LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e.Date
+
+relationship b43ca8dc-72c4-f799-3398-a9a8f92fc3ab
+	fromColumn: 'mvp base_clientes'.data_venda
+	toColumn: dim_calendario.Data
+

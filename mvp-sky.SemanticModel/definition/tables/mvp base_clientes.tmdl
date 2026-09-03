@@ -1,0 +1,185 @@
+table 'mvp base_clientes'
+	lineageTag: 0477a203-387f-4531-a032-2d44fa351b32
+
+	measure ContagemClientes =
+			
+			
+			CALCULATE(
+			    COUNT('mvp base_clientes'[nome_cliente])
+			)
+		formatString: #,0
+		lineageTag: 6d6d7974-35f0-481b-a86e-9553c6251185
+
+	column nome_cliente
+		dataType: string
+		lineageTag: ef3f9099-dafa-49d5-942d-3b544a47727f
+		summarizeBy: none
+		sourceColumn: nome_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_produto
+		dataType: string
+		lineageTag: 09a51ff4-125e-42e0-abc4-4d978e871a0a
+		summarizeBy: none
+		sourceColumn: grupo_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: c97ce6da-d1a0-47dc-a29c-5dc90530c978
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column filial_regional
+		dataType: string
+		lineageTag: ad66c90e-cedc-4f78-97e6-ef4d1bbfa180
+		summarizeBy: none
+		sourceColumn: filial_regional
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: ac6a9bed-e017-476c-a330-8f48225682b9
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column estagio
+		dataType: string
+		lineageTag: 0324af85-1f08-4105-8602-28c2ff4a3ba6
+		summarizeBy: none
+		sourceColumn: estagio
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 3de870bc-e654-43d8-a308-83f3208e72b7
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_venda
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 33095b4e-cbfb-449d-8019-1e56c9d0cd8d
+		summarizeBy: none
+		sourceColumn: data_venda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column vendedor
+		dataType: string
+		lineageTag: 9d5eb9ac-fd66-4ae8-ace5-bfdf95f8d92c
+		summarizeBy: none
+		sourceColumn: vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_contrato
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 1c207653-9fe2-4f5c-9581-fb29a547588f
+		summarizeBy: sum
+		sourceColumn: valor_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column empresa
+		dataType: string
+		lineageTag: 28b8efac-1e71-46aa-8be3-45d692853d5c
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column credenciado_sky
+		dataType: int64
+		formatString: 0
+		lineageTag: 43298cbf-2108-45c0-9120-ae6426498738
+		summarizeBy: sum
+		sourceColumn: credenciado_sky
+
+		annotation SummarizationSetBy = Automatic
+
+	column possui_streaming_sky
+		dataType: int64
+		formatString: 0
+		lineageTag: 7104245e-f20e-473b-9076-a25924fc9c8f
+		summarizeBy: sum
+		sourceColumn: possui_streaming_sky
+
+		annotation SummarizationSetBy = Automatic
+
+	column credSky
+		dataType: string
+		lineageTag: 33c03b8c-e125-4d72-a0c6-8f831993fbea
+		summarizeBy: none
+		sourceColumn: credSky
+
+		annotation SummarizationSetBy = Automatic
+
+	column possuiStreaming
+		dataType: string
+		lineageTag: c3a40d26-49cf-4377-bceb-74f0ccaef1db
+		summarizeBy: none
+		sourceColumn: possuiStreaming
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b7fe68f-4324-4da9-a736-21ce94d24a5b
+		summarizeBy: sum
+		sourceColumn: id_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column plano
+		dataType: string
+		lineageTag: 3b4ef687-832c-4879-9c05-f49d08ecb651
+		summarizeBy: none
+		sourceColumn: plano
+
+		annotation SummarizationSetBy = Automatic
+
+	column velocidade
+		dataType: string
+		lineageTag: f1f8148f-453d-4334-9ab9-344c728f02b8
+		summarizeBy: none
+		sourceColumn: velocidade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mvp base_clientes' = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("177.13.0.39:5432", "dw_empresa"),
+				    mvp_base_clientes = Fonte{[Schema="mvp",Item="base_clientes"]}[Data],
+				    #"Colunas Removidas" = Table.RemoveColumns(mvp_base_clientes,{"id_cliente"}),
+				    #"Data Extraída" = Table.TransformColumns(#"Colunas Removidas",{{"dt_servico", DateTime.Date, type date}}),
+				    #"Colunas Removidas1" = Table.RemoveColumns(#"Data Extraída",{"usuario", "concentrador", "olt", "cidade_olt", "uf_olt", "port_olt", "slot_olt", "tipo", "endereco", "numero", "bairro", "cod_ibge", "evento", "descricao", "segmento", "ativacao", "churn", "mvno", "id_vendedor", "cpf_vendedor", "tipo_pessoa", "doc", "data_ativacao", "data_cancelamento", "dt_servico"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Removidas1",{{"valor_contrato", Currency.Type}, {"credenciado_sky", Int64.Type}, {"possui_streaming_sky", Int64.Type}}),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Tipo Alterado", "credSky", each if [credenciado_sky] = 1 then "SIM" else if [credenciado_sky] = 0 then "NÃO" else "Outros"),
+				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Coluna Condicional Adicionada", "possuiStreaming", each if [possui_streaming_sky] = 1 then "SIM" else if [possui_streaming_sky] = 0 then "NÃO" else "OUTROS"),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada1",{{"credSky", type text}, {"possuiStreaming", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

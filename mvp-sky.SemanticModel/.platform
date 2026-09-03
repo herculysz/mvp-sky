@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "mvp-sky"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9081b724-1b36-4990-b286-85f335fedf7d"
+  }
+}

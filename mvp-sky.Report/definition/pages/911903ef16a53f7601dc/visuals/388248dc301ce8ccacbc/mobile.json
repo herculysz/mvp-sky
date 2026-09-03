@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.7.0/schema.json",
+  "position": {
+    "x": 248,
+    "y": 1,
+    "z": 7000,
+    "height": 22,
+    "width": 76,
+    "tabOrder": 6000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Atualizado em:",
+                  "textStyle": {
+                    "fontSize": "8pt",
+                    "color": "#1a1a1a"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

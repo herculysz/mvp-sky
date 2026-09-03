@@ -1,0 +1,15 @@
+expression Database = "dw_empresa" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: a5a6b34f-b529-467e-9ca0-59c7ace2e76d
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+
+/// PostGSQL
+expression HostPort = "177.13.0.39:5432" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: f6274e56-28e7-4139-89db-4e4b92816c82
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+

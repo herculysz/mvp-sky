@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.7.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 723,
+    "z": 17000,
+    "height": 15,
+    "width": 323,
+    "tabOrder": 17000
+  },
+  "objects": {
+    "shape": [],
+    "rotation": [],
+    "fill": [],
+    "outline": [
+      {
+        "properties": {
+          "lineColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          },
+          "weight": {
+            "expr": {
+              "Literal": {
+                "Value": "1D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ]
+  }
+}

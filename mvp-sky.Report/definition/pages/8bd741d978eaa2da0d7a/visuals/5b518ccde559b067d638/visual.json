@@ -1,0 +1,764 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "5b518ccde559b067d638",
+  "position": {
+    "x": 281.86046511627904,
+    "y": 135.34883720930233,
+    "z": 23000,
+    "height": 888.83720930232562,
+    "width": 1606.046511627907,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "empresa"
+                }
+              },
+              "queryRef": "mvp base_clientes.empresa",
+              "nativeQueryRef": "Empresa",
+              "displayName": "Empresa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "filial_regional"
+                }
+              },
+              "queryRef": "mvp base_clientes.filial_regional",
+              "nativeQueryRef": "Filial Regional",
+              "displayName": "Filial Regional"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "uf"
+                }
+              },
+              "queryRef": "mvp base_clientes.uf",
+              "nativeQueryRef": "UF",
+              "displayName": "UF"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "cidade"
+                }
+              },
+              "queryRef": "mvp base_clientes.cidade",
+              "nativeQueryRef": "Cidade",
+              "displayName": "Cidade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "data_venda"
+                }
+              },
+              "queryRef": "mvp base_clientes.data_venda",
+              "nativeQueryRef": "Data da Venda",
+              "displayName": "Data da Venda"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "estagio"
+                }
+              },
+              "queryRef": "mvp base_clientes.estagio",
+              "nativeQueryRef": "Estagio",
+              "displayName": "Estagio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "grupo_produto"
+                }
+              },
+              "queryRef": "mvp base_clientes.grupo_produto",
+              "nativeQueryRef": "Produto",
+              "displayName": "Produto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "mvp base_clientes.status",
+              "nativeQueryRef": "Status",
+              "displayName": "Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "vendedor"
+                }
+              },
+              "queryRef": "Min(mvp base_clientes.vendedor)",
+              "nativeQueryRef": "Vendedor",
+              "displayName": "Vendedor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "id_contrato"
+                }
+              },
+              "queryRef": "Sum(mvp base_clientes.id_contrato)",
+              "nativeQueryRef": "ID Contrato",
+              "displayName": "ID Contrato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "nome_cliente"
+                }
+              },
+              "queryRef": "mvp base_clientes.nome_cliente",
+              "nativeQueryRef": "Cliente",
+              "displayName": "Cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "velocidade"
+                }
+              },
+              "queryRef": "mvp base_clientes.velocidade",
+              "nativeQueryRef": "Velocidade",
+              "displayName": "Velocidade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "plano"
+                }
+              },
+              "queryRef": "mvp base_clientes.plano",
+              "nativeQueryRef": "Plano",
+              "displayName": "Plano"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "credSky"
+                }
+              },
+              "queryRef": "mvp base_clientes.credSky",
+              "nativeQueryRef": "Credenciado Sky",
+              "displayName": "Credenciado Sky"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "possuiStreaming"
+                }
+              },
+              "queryRef": "mvp base_clientes.possuiStreaming",
+              "nativeQueryRef": "Streaming",
+              "displayName": "Streaming"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "ContagemClientes"
+                }
+              },
+              "queryRef": "mvp base_clientes.ContagemClientes",
+              "nativeQueryRef": "Count",
+              "displayName": "Count"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F1C4C'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8C32C'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "193.37531598719093D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(mvp base_clientes.vendedor)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "76.32278287306113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.status"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.16314011215613D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.possuiStreaming"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "192.02427070177336D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.nome_cliente"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.0697555583187D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.credSky"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.97672155081515D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.ContagemClientes"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.76743021944853D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.cidade"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8C32C'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F1C4C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'NOVOS CLIENTES'"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FAFBFC'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F1C4C'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CDCDCD'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showVisualInformationButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualWarningButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualErrorButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillRoleSelector": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillUpButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillDownLevelButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillDownExpandButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a52c33e01c023697e8b1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "mvp base_clientes"
+                  }
+                },
+                "Property": "credenciado_sky"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "isLockedInViewMode": true
+      }
+    ]
+  }
+}

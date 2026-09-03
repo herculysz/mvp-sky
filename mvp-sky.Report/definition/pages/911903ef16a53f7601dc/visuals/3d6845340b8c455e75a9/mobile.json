@@ -1,0 +1,193 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.7.0/schema.json",
+  "position": {
+    "x": 7,
+    "y": 579,
+    "z": 20000,
+    "height": 78,
+    "width": 308,
+    "tabOrder": 20000
+  },
+  "objects": {
+    "data": [],
+    "general": [],
+    "slider": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header": [
+      {
+        "properties": {
+          "fontColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          },
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "dateRangeText": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "relativeText": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "calendarButton": [
+      {
+        "properties": {
+          "iconColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ],
+    "pendingChangesIcon": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualContainerObjects": {
+    "background": [],
+    "title": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "text": {
+            "expr": {
+              "Literal": {
+                "Value": "'DATA DA VENDA'"
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'left'"
+              }
+            }
+          },
+          "fontSize": {
+            "expr": {
+              "Literal": {
+                "Value": "12D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "divider": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "spacing": [
+      {
+        "properties": {
+          "spaceAbovePlotArea": {
+            "expr": {
+              "Literal": {
+                "Value": "5D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

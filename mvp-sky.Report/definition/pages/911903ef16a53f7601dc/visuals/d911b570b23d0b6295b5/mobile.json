@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.7.0/schema.json",
+  "position": {
+    "x": 208,
+    "y": 23,
+    "z": 8000,
+    "height": 22,
+    "width": 116,
+    "tabOrder": 7000
+  },
+  "objects": {
+    "categoryLabels": [],
+    "wordWrap": [],
+    "labels": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#2D2870'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "4282329c3e4abadbecfe",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 587.27272727272725,
+    "width": 499.99999999999994,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "vendedor"
+                }
+              },
+              "queryRef": "mvp base_clientes.vendedor",
+              "nativeQueryRef": "Vendedor",
+              "displayName": "Vendedor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "ContagemClientes"
+                }
+              },
+              "queryRef": "mvp base_clientes.ContagemClientes",
+              "nativeQueryRef": "Contagem de Clientes",
+              "displayName": "Contagem de Clientes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "mvp base_clientes"
+                  }
+                },
+                "Property": "ContagemClientes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "307.812657086784D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.vendedor"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

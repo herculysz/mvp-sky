@@ -1,0 +1,30 @@
+createOrReplace
+
+	table _Updated
+
+		measure Atualização = "Atualização dos Dados: "& MAX(_Updated[DataHoraAtualização])
+
+		measure Report = "RELATÓRIO DE ESTOQUE | "& FORMAT(MAX(_Updated[DataHoraAtualização]), "dd/mm/yyyy")
+
+		column DataHoraAtualização
+			dataType: dateTime
+			formatString: General Date
+			summarizeBy: none
+			sourceColumn: DataHoraAtualização
+
+
+		partition _Updated = m
+			mode: import
+			source =
+					let
+					    Fonte = #table(
+					        type table [DataHoraAtualização = datetime],
+					        {{ DateTime.LocalNow() }}
+					    )
+					in
+					    Fonte
+
+		annotation PBI_NavigationStepName = Navegação
+
+		annotation PBI_ResultType = Table
+

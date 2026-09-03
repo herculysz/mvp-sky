@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.7.0/schema.json",
+  "position": {
+    "x": 6,
+    "y": 582,
+    "z": 15000,
+    "height": 78,
+    "width": 317,
+    "tabOrder": 15000
+  },
+  "objects": {
+    "data": [],
+    "general": [],
+    "slider": [],
+    "header": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "dateRangeText": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "relativeText": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "calendarButton": [
+      {
+        "properties": {
+          "iconColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ]
+  },
+  "visualContainerObjects": {
+    "background": [],
+    "title": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "text": {
+            "expr": {
+              "Literal": {
+                "Value": "'DATA DA VENDA'"
+              }
+            }
+          },
+          "fontSize": {
+            "expr": {
+              "Literal": {
+                "Value": "12D"
+              }
+            }
+          },
+          "fontColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1F1C4C'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

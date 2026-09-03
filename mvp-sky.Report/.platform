@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "mvp-sky"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "05d8e441-1d3e-4724-93cf-fbb385dab968"
+  }
+}

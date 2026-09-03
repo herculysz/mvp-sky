@@ -1,0 +1,941 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Analítico",
+  "name": "484dbb061a3049108952",
+  "options": {
+    "targetVisualNames": [
+      "5b518ccde559b067d638"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "8bd741d978eaa2da0d7a",
+    "sections": {
+      "8bd741d978eaa2da0d7a": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "9ae7c23fa37bf9188a5d",
+              "type": "Categorical",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "ContagemClientes"
+                }
+              },
+              "howCreated": 5
+            }
+          ]
+        },
+        "visualContainers": {
+          "160b0fb52a2aabfd483a": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "16d08632216001d09126": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "30383550cb9ee620dc81": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "4bcc8d29aa09b7dfac8f": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "65febe05ad47f4b7c28d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "711ece2838cb3729dda9": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "76a6936c1f0b42c49672": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7bf891e2c86fc250099b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9824bbc0207bcddd778e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_updated"
+                            }
+                          },
+                          "Property": "DataHoraAtualização"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_updated"
+                            }
+                          },
+                          "Property": "DataHoraAtualização"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "95486a011ddb03be3480": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e202be016baac95cf70f": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "ead07f217c55a484d0a9": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5b518ccde559b067d638": {
+            "filters": {
+              "byName": {
+                "a52c33e01c023697e8b1": {
+                  "name": "a52c33e01c023697e8b1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "mvp base_clientes"
+                            }
+                          },
+                          "Property": "credenciado_sky"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "73fbd229f5c2616ba717",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "empresa"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d87e7bc9afebf14b0936",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "filial_regional"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "107909a9459fe0b56409",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "vendedor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "eb385efbd2811b728dc7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "status"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d29a3993fe7afb5a34d8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "estagio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9a88a3f443d9acf92b6f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "credSky"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c113ab244d8ec657348f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "possuiStreaming"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a57e2f482e791be8f2a5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "cidade"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a7508aa04de4e7a2d2da",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "data_venda"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b4bb6e38f95af8f7732e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "grupo_produto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "99cf8053a87a37b1c888",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "nome_cliente"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4377afebc9793b38307b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "uf"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "caf894e9222dec2db44d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "ContagemClientes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "3fc2805aa6aa301087a3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a4b9ef49afabbb903a40",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "grupo_produto"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "grupo_produto"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "d2e70a764de3bc72be1d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4b4f35519431c5fc8f89",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "possuiStreaming"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "possuiStreaming"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0017257d5adcd8ef516e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9776b3c39f417b55cd85": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "b834e1070aa72d10df2b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ce4212f6619335a9c15d": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "c52dc8436fc3b3a5f2ab": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2f5d44205cfbdb662156",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "credSky"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "credSky"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0b4e1d23016778571252": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8425ccc329d4fc3b9a74",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "Data"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "dim_calendario",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "d"
+                                          }
+                                        },
+                                        "Property": "Data"
+                                      }
+                                    },
+                                    "Right": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "Now": {}
+                                        },
+                                        "TimeUnit": 3
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "Data"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "3af39e3e571c4818e01d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "71f917937e7684ce943b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "estagio"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "estagio"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6b0b2736664bb7cdbf1c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5c66d7ff1ff6999ec463",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "status"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "status"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "643619c3e7c10f428f78": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ee7376f4aa08c0343332",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "empresa"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "empresa"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "04c07dcae4e636aab8aa": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a3f9705d710b3d5ae4c6",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "filial_regional"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "filial_regional"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

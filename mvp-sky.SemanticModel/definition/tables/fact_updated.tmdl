@@ -1,0 +1,33 @@
+table fact_updated
+	lineageTag: d6feae51-1c8d-421f-8378-65c850354808
+
+	measure Atualização = "Atualizado em: "& MAX(fact_updated[DataHoraAtualização])
+		lineageTag: 89522af1-0c54-4b92-9d35-0c8e97625650
+
+	column DataHoraAtualização
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d88b89b2-b08c-4b5b-9c3b-784bb6c52826
+		summarizeBy: none
+		sourceColumn: DataHoraAtualização
+
+		variation Variation
+			isDefault
+			relationship: a3e03801-0554-42a3-8e41-aa921117f6a5
+			defaultHierarchy: LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e.'Hierarquia de datas'
+
+	partition fact_updated = m
+		mode: import
+		source =
+				let
+				    Fonte = #table(
+				        type table [DataHoraAtualização = datetime],
+				        {{ DateTime.LocalNow() }}
+				    )
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

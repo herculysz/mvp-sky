@@ -1,0 +1,25 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Database","HostPort","dim_calendario","fact_updated","mvp base_clientes"]
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","MCP-PBIModeling"]
+
+ref table dim_calendario
+ref table DateTableTemplate_ef6d0dd0-95a2-4512-91da-883f0e5eaaa2
+ref table LocalDateTable_bea7b7cd-4e5a-4991-89e3-817011c4209d
+ref table LocalDateTable_498158f6-430a-4bd6-80e9-7622cf64ec13
+ref table fact_updated
+ref table LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e
+ref table 'mvp base_clientes'
+
+ref cultureInfo pt-BR
+
