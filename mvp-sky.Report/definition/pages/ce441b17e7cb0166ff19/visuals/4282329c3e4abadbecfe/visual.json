@@ -42,8 +42,8 @@
                 }
               },
               "queryRef": "mvp base_clientes.ContagemClientes",
-              "nativeQueryRef": "Contagem de Clientes",
-              "displayName": "Contagem de Clientes"
+              "nativeQueryRef": "Contagem de Clientes por data de venda",
+              "displayName": "Contagem de Clientes por data de venda"
             }
           ]
         }
@@ -80,6 +80,20 @@
           },
           "selector": {
             "metadata": "mvp base_clientes.vendedor"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "149D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.ContagemClientes"
           }
         }
       ],

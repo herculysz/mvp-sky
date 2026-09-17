@@ -3,12 +3,59 @@ table 'mvp base_clientes'
 
 	measure ContagemClientes =
 			
-			
 			CALCULATE(
-			    COUNT('mvp base_clientes'[nome_cliente])
-			)
+			    COUNTROWS('mvp base_clientes'),
+			    USERELATIONSHIP(
+			        'mvp base_clientes'[data_venda],
+			        'dim_calendario'[Data]
+			    )
+			    ,
+			    NOT(ISBLANK('mvp base_clientes'[data_venda])
+			))
 		formatString: #,0
 		lineageTag: 6d6d7974-35f0-481b-a86e-9553c6251185
+
+	measure ContagemClientesCancelados =
+			
+			CALCULATE(
+			    COUNTROWS('mvp base_clientes'),
+			    USERELATIONSHIP(
+			        'mvp base_clientes'[data_cancelamento],
+			        'dim_calendario'[Data]
+			    ),
+			    NOT ISBLANK('mvp base_clientes'[data_cancelamento])
+			)
+		formatString: 0
+		lineageTag: 75d6995b-9e60-4379-aeba-a114392205b8
+
+	measure ContagemClientesAtivados =
+			
+			CALCULATE(
+			    COUNTROWS('mvp base_clientes'),
+			    USERELATIONSHIP(
+			        'mvp base_clientes'[data_ativacao],
+			        'dim_calendario'[Data]
+			    ),
+			    NOT ISBLANK('mvp base_clientes'[data_ativacao])
+			)
+		formatString: 0
+		lineageTag: 61e11185-e9aa-4358-a3ec-223a92f403b4
+
+	measure ContagemClientesPendentes =
+			
+			CALCULATE(
+			    COUNTROWS('mvp base_clientes'),
+			    USERELATIONSHIP(
+			        'mvp base_clientes'[data_venda],
+			        'dim_calendario'[Data]
+			    ),
+			    NOT ISBLANK('mvp base_clientes'[data_venda]),
+			    'mvp base_clientes'[churn] = 0,
+			    'mvp base_clientes'[ativacao] = 0,
+			    'mvp base_clientes'[estagio] IN {"PRE-CONTRATO", "EM APROVAÇÃO"}
+			)
+		formatString: 0
+		lineageTag: c66fb3bf-ee10-4465-a60b-1cf301f96e26
 
 	column nome_cliente
 		dataType: string
@@ -163,21 +210,190 @@ table 'mvp base_clientes'
 
 		annotation SummarizationSetBy = Automatic
 
+	column usuario
+		dataType: string
+		lineageTag: a99cb7ca-67f8-4d8d-be8a-fa908c74d43f
+		summarizeBy: none
+		sourceColumn: usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_ativacao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e0d5d571-8f1b-4fb4-ae8f-c0509e24703f
+		summarizeBy: none
+		sourceColumn: data_ativacao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_cancelamento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 25de479d-fed5-4647-8de4-f6878855a3d5
+		summarizeBy: none
+		sourceColumn: data_cancelamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ativacao
+		dataType: int64
+		formatString: 0
+		lineageTag: e2bfded8-b963-4d40-ad0f-f1b184ae82ef
+		summarizeBy: sum
+		sourceColumn: ativacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn
+		dataType: int64
+		formatString: 0
+		lineageTag: 49ced495-c6c5-4054-b7c9-f6563c71e9f5
+		summarizeBy: sum
+		sourceColumn: churn
+
+		annotation SummarizationSetBy = Automatic
+
+	column mvno
+		dataType: int64
+		formatString: 0
+		lineageTag: c37e83df-4a51-47d2-8f8b-f7cf846d0ff2
+		summarizeBy: sum
+		sourceColumn: mvno
+
+		annotation SummarizationSetBy = Automatic
+
+	column evento
+		dataType: string
+		lineageTag: 7e8dcdc8-7792-421c-a9e7-01d166ce2f0b
+		summarizeBy: none
+		sourceColumn: evento
+
+		annotation SummarizationSetBy = Automatic
+
+	column tecnologia
+		dataType: string
+		lineageTag: fab01570-f1bd-4afb-b416-aab08e90ed57
+		summarizeBy: none
+		sourceColumn: tecnologia
+
+		annotation SummarizationSetBy = Automatic
+
+	column evento_macro =
+			
+			
+			IF(
+			    CONTAINSSTRING('mvp base_clientes'[evento], "INADIMPLENTE") || CONTAINSSTRING('mvp base_clientes'[evento], "INADIMPLÊNCIA"),
+			    "INVOLUNTÁRIO",
+			    "VOLUNTÁRIO"
+			)
+		lineageTag: 11ae7541-031c-4c59-bc2e-7787bdc31808
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'mvp base_clientes' = m
 		mode: import
 		source =
 				let
-				    Fonte = PostgreSQL.Database("177.13.0.39:5432", "dw_empresa"),
-				    mvp_base_clientes = Fonte{[Schema="mvp",Item="base_clientes"]}[Data],
-				    #"Colunas Removidas" = Table.RemoveColumns(mvp_base_clientes,{"id_cliente"}),
-				    #"Data Extraída" = Table.TransformColumns(#"Colunas Removidas",{{"dt_servico", DateTime.Date, type date}}),
-				    #"Colunas Removidas1" = Table.RemoveColumns(#"Data Extraída",{"usuario", "concentrador", "olt", "cidade_olt", "uf_olt", "port_olt", "slot_olt", "tipo", "endereco", "numero", "bairro", "cod_ibge", "evento", "descricao", "segmento", "ativacao", "churn", "mvno", "id_vendedor", "cpf_vendedor", "tipo_pessoa", "doc", "data_ativacao", "data_cancelamento", "dt_servico"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Removidas1",{{"valor_contrato", Currency.Type}, {"credenciado_sky", Int64.Type}, {"possui_streaming_sky", Int64.Type}}),
-				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Tipo Alterado", "credSky", each if [credenciado_sky] = 1 then "SIM" else if [credenciado_sky] = 0 then "NÃO" else "Outros"),
-				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Coluna Condicional Adicionada", "possuiStreaming", each if [possui_streaming_sky] = 1 then "SIM" else if [possui_streaming_sky] = 0 then "NÃO" else "OUTROS"),
-				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada1",{{"credSky", type text}, {"possuiStreaming", type text}})
+				    Fonte =
+				        PostgreSQL.Database(host, database),
+				
+				    mvp_base_clientes =
+				        Fonte{
+				            [
+				                Schema = "mvp",
+				                Item = "base_clientes"
+				            ]
+				        }[Data],
+				
+				    // Mantém somente os clientes de vendedores credenciados SKY
+				    #"Linhas Filtradas" =
+				        Table.SelectRows(
+				            mvp_base_clientes,
+				            each [credenciado_sky] = 1
+				        ),
+				
+				    // Remove colunas que não serão utilizadas no relatório
+				    // A coluna "usuario" foi mantida como nome do vendedor
+				    #"Colunas Removidas" =
+				        Table.RemoveColumns(
+				            #"Linhas Filtradas",
+				            {
+				                "id_cliente",
+				                "concentrador",
+				                "olt",
+				                "cidade_olt",
+				                "uf_olt",
+				                "port_olt",
+				                "slot_olt",
+				                "tipo",
+				                "endereco",
+				                "numero",
+				                "bairro",
+				                "cod_ibge",
+				                "descricao",
+				                "segmento",
+				                "id_vendedor",
+				                "cpf_vendedor",
+				                "tipo_pessoa",
+				                "doc",
+				                "dt_servico"
+				            },
+				            MissingField.Ignore
+				        ),
+				
+				    // Define data_venda como a data principal
+				    #"Data da Venda Ajustada" =
+				        Table.TransformColumns(
+				            #"Colunas Removidas",
+				            {
+				                {
+				                    "data_venda",
+				                    each if _ = null then null else Date.From(_),
+				                    type date
+				                }
+				            }
+				        ),
+				
+				    #"Tipos Alterados" =
+				        Table.TransformColumnTypes(
+				            #"Data da Venda Ajustada",
+				            {
+				                {"valor_contrato", Currency.Type},
+				                {"credenciado_sky", Int64.Type},
+				                {"possui_streaming_sky", Int64.Type},
+				                {"usuario", type text}
+				            }
+				        ),
+				
+				    #"Credenciado SKY Adicionado" =
+				        Table.AddColumn(
+				            #"Tipos Alterados",
+				            "credSky",
+				            each
+				                if [credenciado_sky] = 1 then "SIM"
+				                else if [credenciado_sky] = 0 then "NÃO"
+				                else "OUTROS",
+				            type text
+				        ),
+				
+				    #"Possui Streaming Adicionado" =
+				        Table.AddColumn(
+				            #"Credenciado SKY Adicionado",
+				            "possuiStreaming",
+				            each
+				                if [possui_streaming_sky] = 1 then "SIM"
+				                else if [possui_streaming_sky] = 0 then "NÃO"
+				                else "OUTROS",
+				            type text
+				        )
 				in
-				    #"Tipo Alterado1"
+				    #"Possui Streaming Adicionado"
 
 	annotation PBI_NavigationStepName = Navegação
 

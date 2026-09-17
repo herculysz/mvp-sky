@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 792.36163941535983,
-            "y": 23.5
+            "x": 465.36163941535983,
+            "y": 164
           },
           "nodeIndex": "dim_calendario",
           "nodeLineageTag": "3add6b18-ab4a-4839-934c-d03d99bff0e1",
@@ -35,8 +35,8 @@
         },
         {
           "location": {
-            "x": 419,
-            "y": 197.5
+            "x": 909,
+            "y": 336.5
           },
           "nodeIndex": "mvp base_clientes",
           "nodeLineageTag": "0477a203-387f-4531-a032-2d44fa351b32",

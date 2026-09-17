@@ -264,7 +264,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Contagem de Clientes'"
+                  "Value": "'Contagem de Clientes por Data de Venda'"
                 }
               }
             }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3d6845340b8c455e75a9",
   "position": {
-    "x": 26.511627906976745,
-    "y": 641.8604651162791,
-    "z": 19000,
-    "height": 111.62790697674419,
-    "width": 202.32558139534885,
-    "tabOrder": 19000
+    "x": 27.144914255792642,
+    "y": 468.70218615001966,
+    "z": 10000,
+    "height": 110.38931797355674,
+    "width": 200.87236549286555,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -131,7 +131,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Data da Venda'"
+                  "Value": "'Período'"
                 }
               }
             },
@@ -274,6 +274,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Filtro Data'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

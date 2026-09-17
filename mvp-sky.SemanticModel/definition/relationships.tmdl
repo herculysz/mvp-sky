@@ -14,6 +14,16 @@ relationship a3e03801-0554-42a3-8e41-aa921117f6a5
 	toColumn: LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e.Date
 
 relationship b43ca8dc-72c4-f799-3398-a9a8f92fc3ab
+	isActive: false
 	fromColumn: 'mvp base_clientes'.data_venda
+	toColumn: dim_calendario.Data
+
+relationship 772bad18-c42b-c344-a874-18a180ce9df9
+	isActive: false
+	fromColumn: 'mvp base_clientes'.data_cancelamento
+	toColumn: dim_calendario.Data
+
+relationship d8d0de11-54b7-763e-fa33-468c7ef210aa
+	fromColumn: 'mvp base_clientes'.data_ativacao
 	toColumn: dim_calendario.Data
 

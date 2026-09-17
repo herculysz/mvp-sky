@@ -4,10 +4,10 @@
   "position": {
     "x": 22.325581395348838,
     "y": 160.46511627906978,
-    "z": 24125,
+    "z": 14000,
     "height": 55.440729483282674,
     "width": 202.79635258358661,
-    "tabOrder": 23000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "slicer",
@@ -115,7 +115,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'EMPRESA'"
+                  "Value": "'REGIÃO'"
                 }
               }
             },

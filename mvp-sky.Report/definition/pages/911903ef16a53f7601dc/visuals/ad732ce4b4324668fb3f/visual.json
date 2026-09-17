@@ -4,10 +4,10 @@
   "position": {
     "x": 281.42857142857144,
     "y": 122.85714285714286,
-    "z": 25000,
+    "z": 17000,
     "height": 455.71428571428572,
     "width": 625.71428571428578,
-    "tabOrder": 25000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "donutChart",
@@ -265,7 +265,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CLIENTES POR GRUPO DO PRODUTO'"
+                  "Value": "'VENDAS POR GRUPO DO PRODUTO'"
                 }
               }
             },

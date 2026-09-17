@@ -41,17 +41,6 @@
   },
   "resourcePackages": [
     {
-      "name": "SharedResources",
-      "type": "SharedResources",
-      "items": [
-        {
-          "name": "Fluent2-CY26SU08",
-          "path": "BaseThemes/Fluent2-CY26SU08.json",
-          "type": "BaseTheme"
-        }
-      ]
-    },
-    {
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
@@ -59,6 +48,17 @@
           "name": "zaaz-icon1291532454041714.jpg",
           "path": "zaaz-icon1291532454041714.jpg",
           "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "Fluent2-CY26SU08",
+          "path": "BaseThemes/Fluent2-CY26SU08.json",
+          "type": "BaseTheme"
         }
       ]
     }

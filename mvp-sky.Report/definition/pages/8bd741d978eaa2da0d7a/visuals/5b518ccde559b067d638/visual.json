@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5b518ccde559b067d638",
   "position": {
-    "x": 281.86046511627904,
-    "y": 135.34883720930233,
-    "z": 23000,
+    "x": 287.27728983688843,
+    "y": 130.08782936010039,
+    "z": 10000,
     "height": 888.83720930232562,
     "width": 1606.046511627907,
-    "tabOrder": 19000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "tableEx",
@@ -98,6 +98,36 @@
                       "Entity": "mvp base_clientes"
                     }
                   },
+                  "Property": "data_ativacao"
+                }
+              },
+              "queryRef": "mvp base_clientes.data_ativacao",
+              "nativeQueryRef": "Data de Ativação",
+              "displayName": "Data de Ativação"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
+                  "Property": "data_cancelamento"
+                }
+              },
+              "queryRef": "mvp base_clientes.data_cancelamento",
+              "nativeQueryRef": "Data de Cancelamento",
+              "displayName": "Data de Cancelamento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
                   "Property": "estagio"
                 }
               },
@@ -173,6 +203,21 @@
                       "Entity": "mvp base_clientes"
                     }
                   },
+                  "Property": "valor_contrato"
+                }
+              },
+              "queryRef": "Sum(mvp base_clientes.valor_contrato)",
+              "nativeQueryRef": "Valor Contrato",
+              "displayName": "Valor Contrato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp base_clientes"
+                    }
+                  },
                   "Property": "nome_cliente"
                 }
               },
@@ -218,27 +263,107 @@
                       "Entity": "mvp base_clientes"
                     }
                   },
-                  "Property": "credSky"
+                  "Property": "evento_macro"
                 }
               },
-              "queryRef": "mvp base_clientes.credSky",
-              "nativeQueryRef": "Credenciado Sky",
-              "displayName": "Credenciado Sky"
+              "queryRef": "mvp base_clientes.evento_macro",
+              "nativeQueryRef": "Evento",
+              "displayName": "Evento"
             },
             {
               "field": {
-                "Column": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "possui_streaming_sky"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mvp base_clientes.possui_streaming_sky)",
+              "nativeQueryRef": "Soma de possui_streaming_sky",
+              "displayName": "Serviço com Streaming Sky+"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "ativacao"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mvp base_clientes.ativacao)",
+              "nativeQueryRef": "Ativado",
+              "displayName": "Ativado"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "churn"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mvp base_clientes.churn)",
+              "nativeQueryRef": "Soma de churn",
+              "displayName": "Churn"
+            },
+            {
+              "field": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "mvp base_clientes"
                     }
                   },
-                  "Property": "possuiStreaming"
+                  "Property": "ContagemClientesPendentes"
                 }
               },
-              "queryRef": "mvp base_clientes.possuiStreaming",
-              "nativeQueryRef": "Streaming",
-              "displayName": "Streaming"
+              "queryRef": "mvp base_clientes.ContagemClientesPendentes",
+              "nativeQueryRef": "Pendentes de Ativação",
+              "displayName": "Pendentes de Ativação"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp base_clientes"
+                        }
+                      },
+                      "Property": "mvno"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mvp base_clientes.mvno)",
+              "nativeQueryRef": "Soma de mvno",
+              "displayName": "MVNO"
             },
             {
               "field": {
@@ -252,11 +377,28 @@
                 }
               },
               "queryRef": "mvp base_clientes.ContagemClientes",
-              "nativeQueryRef": "Count",
-              "displayName": "Count"
+              "nativeQueryRef": "Qtd. Conexões",
+              "displayName": "Qtd. Conexões"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "mvp base_clientes"
+                  }
+                },
+                "Property": "ContagemClientes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -361,106 +503,6 @@
           }
         }
       ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "193.37531598719093D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(mvp base_clientes.vendedor)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "76.32278287306113D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp base_clientes.status"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "68.16314011215613D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp base_clientes.possuiStreaming"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "192.02427070177336D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp base_clientes.nome_cliente"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "79.0697555583187D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp base_clientes.credSky"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "49.97672155081515D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp base_clientes.ContagemClientes"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "96.76743021944853D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp base_clientes.cidade"
-          }
-        }
-      ],
       "total": [
         {
           "properties": {
@@ -486,6 +528,22 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.95348837209302D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mvp base_clientes.evento_macro"
           }
         }
       ]

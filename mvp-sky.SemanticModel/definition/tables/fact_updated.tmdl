@@ -20,10 +20,31 @@ table fact_updated
 		mode: import
 		source =
 				let
-				    Fonte = #table(
-				        type table [DataHoraAtualização = datetime],
-				        {{ DateTime.LocalNow() }}
-				    )
+				    HorarioUTC =
+				        DateTimeZone.FixedUtcNow(),
+				
+				    HorarioBrasilia =
+				        DateTimeZone.SwitchZone(
+				            HorarioUTC,
+				            -3
+				        ),
+				
+				    DataHoraSemFuso =
+				        DateTimeZone.RemoveZone(
+				            HorarioBrasilia
+				        ),
+				
+				    Fonte =
+				        #table(
+				            type table [
+				                DataHoraAtualização = datetime
+				            ],
+				            {
+				                {
+				                    DataHoraSemFuso
+				                }
+				            }
+				        )
 				in
 				    Fonte
 

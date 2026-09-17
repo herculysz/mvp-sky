@@ -11,12 +11,6 @@
     "sections": {
       "911903ef16a53f7601dc": {
         "visualContainers": {
-          "177def005212bd3c6b76": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "1f2a8568824cc0ba4a83": {
             "filters": {
               "byExpr": [
@@ -91,80 +85,6 @@
               "objects": {}
             }
           },
-          "2adbb28bcac248fbcc59": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "af53533a5c9c6e137d9d",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp base_clientes"
-                        }
-                      },
-                      "Property": "possuiStreaming"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp base_clientes"
-                        }
-                      },
-                      "Property": "possuiStreaming"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "332125653b8d74dfba93": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
           "388248dc301ce8ccacbc": {
             "singleVisual": {
               "visualType": "textbox",
@@ -192,24 +112,6 @@
           "4f7848e0c0147ab73ea4": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "5f9b045347b5752d27b2": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "6296628ef9011701c178": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "68ef5d81dc9fd166fddb": {
-            "singleVisual": {
-              "visualType": "shape",
               "objects": {}
             }
           },
@@ -292,80 +194,6 @@
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
-            }
-          },
-          "c8b588f1a814055958b4": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "d718d2c90a9bf6119c18": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "cd01576c9e55324aee09",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp base_clientes"
-                        }
-                      },
-                      "Property": "credSky"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp base_clientes"
-                        }
-                      },
-                      "Property": "credSky"
-                    }
-                  }
-                ]
-              }
             }
           },
           "d911b570b23d0b6295b5": {
@@ -731,61 +559,6 @@
                         }
                       },
                       "Property": "empresa"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "8e41279dbe18dda0853d": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "0f9a156764276f3a8f02",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp base_clientes"
-                        }
-                      },
-                      "Property": "filial_regional"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp base_clientes"
-                        }
-                      },
-                      "Property": "filial_regional"
                     }
                   }
                 ]

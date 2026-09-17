@@ -4,10 +4,10 @@
   "position": {
     "x": 942.85714285714289,
     "y": 122.85714285714286,
-    "z": 24250,
+    "z": 15000,
     "height": 455.71428571428572,
     "width": 941.42857142857144,
-    "tabOrder": 13000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "barChart",
@@ -180,7 +180,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CLIENTES POR REGIÃO'"
+                  "Value": "'VENDAS POR REGIÃO'"
                 }
               }
             },
